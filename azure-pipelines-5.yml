@@ -10,14 +10,13 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '2f384df2-6b2e-425e-824c-cacf35ffe562'
+  dockerRegistryServiceConnection: 'fdb87668-b4d3-466c-a080-fc8f687e3fff'
   imageRepository: 'ananddeepaktetrisgameapp'
-  containerRegistry: 'newbuild.azurecr.io'
+  containerRegistry: 'mylab2.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-
-  pool:
-  name: agnety
+pool:
+  name: agenty
 stages:
 - stage: Build
   displayName: Build and push stage
