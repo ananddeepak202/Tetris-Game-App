@@ -17,17 +17,13 @@ variables:
   tag: '$(Build.BuildId)'
 
   pool:
-      name: agenty
-  name:agenty
-
+  name: agnety
 stages:
 - stage: Build
   displayName: Build and push stage
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      name: agenty
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
